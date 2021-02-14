@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" href="css/style.css" media="screen,projection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Painting Gallery</title>
+  </head>
+  <body>
+    <nav class="bluechef" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo white-text">
+          <img src="img/logo.png" alt="logo" style="height:35px;">
+          Paintings Gallery</a>
+        <ul class="topnav right hide-on-med-and-down">
+          <li><a href="index.html#paintings" class="white-text">Paintings</a></li>
+          <li><a href="index.html#painters" class="white-text">Painters</a></li>
+          <li><a href="index.html#recommendations" class="white-text">Recommendations</a></li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="index.html#paintings">Paintings</a></li>
+          <li><a href="index.html#painters">Painters</a></li>
+          <li><a href="index.html#recommendations">Recommendations</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+          <i class="material-icons white-text">menu</i></a>
+        </div>
+      </nav>
+
+        <div class="row">
+          <div id="recommendationsdetail">
+          </div>
+        </div>
+
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/init.js"></script>
+      <script type="text/javascript" src="js/api.js"></script>
+      <!-- <script type="text/javascript" src="js/loadpage.js"></script> -->
+      <script type="text/javascript" src="js/painting.js"></script>
+      <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+          var urlParams = new URLSearchParams(window.location.search);
+          var r_code = urlParams.get("r_code");
+          getRecommendationDetail(r_code);
+        });
+      </script>
+    </body>
+</html>
