@@ -1,4 +1,4 @@
-const endpoint_url = 'http://51018003.p-web.click/backend/api';
+const endpoint_url = 'https://51018003.p-web.click/backend/api';
 
 function getPaintings() {
   fetch(endpoint_url + "/paintings/paintingdetail")
